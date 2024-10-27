@@ -51,22 +51,31 @@ public class SimpleDate {
     }
 
     @Override
-    public boolean equals(Object comparedObject) {
-        if (this == comparedObject)
-            return true;
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + day;
+        result = prime * result + month;
+        result = prime * result + year;
+        return result;
+    }
 
-        if (!(comparedObject instanceof SimpleDate)) {
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
             return false;
-        }
-
-        SimpleDate comparedDate = (SimpleDate) comparedObject;
-        if ((this.day == comparedDate.day) &&
-                (this.month == comparedDate.month) &&
-                (this.year == comparedDate.year)) {
-            return true;
-        }
-        return false;
-
+        if (getClass() != obj.getClass())
+            return false;
+        SimpleDate other = (SimpleDate) obj;
+        if (day != other.day)
+            return false;
+        if (month != other.month)
+            return false;
+        if (year != other.year)
+            return false;
+        return true;
     }
 
 }
