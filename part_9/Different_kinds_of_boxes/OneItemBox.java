@@ -11,8 +11,6 @@ public class OneItemBox extends Box {
     public void add(Item item) {
         if (this.oneItemList.isEmpty()) {
             this.oneItemList.add(item);
-        } else {
-            return;
         }
     }
 
