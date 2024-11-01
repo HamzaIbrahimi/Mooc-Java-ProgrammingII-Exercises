@@ -6,10 +6,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        ArrayList<Person> persons = new ArrayList<Person>();
-        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
-        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
-        printPersons(persons);
+        // ArrayList<Person> persons = new ArrayList<Person>();
+        // persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN",
+        // 1200));
+        // persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+        // printPersons(persons);
 
         // Person ada = new Person("Ada Lovelace", "24 Maddox St. London W1S 2QN");
         // Person esko = new Person("Esko Ukkonen", "Mannerheimintie 15 00100
@@ -35,6 +36,16 @@ public class Main {
         // i = i + 1;
         // }
         // System.out.println(ollie);
+
+        Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+        System.out.println(ollie);
+        Person olliePerson = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+        System.out.println(olliePerson);
+        Object ollieObject = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+        System.out.println(ollieObject);
+
+        Object alice = new Student("Alice", "177 Stewart Ave. Farmington, ME 04938");
+        System.out.println(alice);
 
     }
 }
