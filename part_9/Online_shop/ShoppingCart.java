@@ -10,6 +10,14 @@ public class ShoppingCart {
     }
 
     public void add(String product, int price) {
+        Item newItem = new Item(product, 1, price);
+        for (Item item : cart) {
+            if (item.equals(newItem)) {
+                item.increaseQuantity();
+                return;
+            }
+        }
+        this.cart.add(newItem);
 
     }
 
