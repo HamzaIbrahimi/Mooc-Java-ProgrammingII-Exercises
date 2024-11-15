@@ -21,6 +21,11 @@ public class Hand implements Comparable<Hand> {
         Collections.sort(this.listOfCards);
     }
 
+    public void sortBySuit() {
+        BySuitInValueOrder bySuitInValueOrder = new BySuitInValueOrder();
+        Collections.sort(this.listOfCards, bySuitInValueOrder);
+    }
+
     @Override
     public int compareTo(Hand hand) {
         return this.listOfCards.stream()
