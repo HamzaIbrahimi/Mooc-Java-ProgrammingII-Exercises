@@ -37,6 +37,8 @@ public class Employees {
                 iterate.remove();
             }
         }
+        // Simpler method with removeIF
+        // this.employeesList.removeIf(person -> person.getEducation() == education);
 
     }
 
