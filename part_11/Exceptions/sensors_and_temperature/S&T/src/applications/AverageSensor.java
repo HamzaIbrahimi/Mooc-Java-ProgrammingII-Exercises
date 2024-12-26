@@ -17,19 +17,23 @@ public class AverageSensor implements Sensor {
         this.sensors.add(toAdd);
     }
 
+    @Override
     public boolean isOn() {
         return this.sensors.stream()
                 .allMatch(Sensor::isOn);
     }
 
+    @Override
     public void setOn() {
         this.sensors.forEach(Sensor::setOn);
     }
 
+    @Override
     public void setOff() {
         this.sensors.forEach(Sensor::setOff);
     }
 
+    @Override
     public int read() {
         if (this.sensors.isEmpty() || !isOn()) {
             throw new IllegalStateException();
